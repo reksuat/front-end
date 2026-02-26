@@ -4,21 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>teste</title>
+    <title>Clinica</title>
 </head>
 <body>
     <header>
-        <h1>Menu</h1>
+        <h1>Clinica bem-estar</h1>
         <nav>
-            <a>Home</a>
-            <a>Sobre</a>
-            <a>Contato</a>
+            <a href="#">Home</a>
+            <a href="#">Consultas</a>
+            <a href="#">Sobre</a>
         </nav>
     </header>
-    <h1>Bem vindo</h1>
+    <h2>Horários de atendimento</h2>
+    <table border="2">
+        <tr>
+            <th>Especialidade</th>
+            <th>Dias</th>
+            <th>Horário</th>
+        </tr>
+        <tr>
+            <td>Atendimento geral</td>
+            <td>Segunda a Sexta</td>
+            <td>09:00 - 18:00</td>
+        </tr>
+        <tr>
+            <td>Dentista</td>
+            <td>Terça a Quinta</td>
+            <td>10:00 - 17:00</td>
+        </tr>
+        <tr>
+            <td>Pediatra</td>
+            <td>Quarta a Sexta</td>
+            <td>09:30 - 15:00</td>
+        </tr>
+    </table>
+     <img src="clinica.jpg" alt="Médico atendendo um paciente">
     
+    <h2>Agende sua consulta</h2>
+    <form action="/submit" method="POST">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="telefone">Tel:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+        <label for="termo">Aceito receber novidades da clínica</label>
+        <input type="text" id="termo" name="termo">
+        <button type="submit">Enviar</button>
+    </form>
     <footer>
-        <p>&copy 2026 direitos site</p>
+        <p>Entre em contato: </p>
+        <p>clinicabemestar@gmail.com</p>
+        <p>&copy 2026 direitos do site - Ponta Grossa</p>
     </footer>
 </body>
 </html>
