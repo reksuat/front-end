@@ -1,5 +1,5 @@
 import React from "react";
-import Produto from "./Produto.js";
+import Produto from "./Produto.jsx";
 
 function ListaProduto() {
   const produtos = [

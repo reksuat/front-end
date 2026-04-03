@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ListaProduto from "./componentes/ListaProduto";
+import ListaProduto from "./componentes/ListaProduto.jsx";
 import "./App.css";
 
 function App() {
