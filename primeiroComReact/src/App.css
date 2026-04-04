@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .listaContainer {
   display: flex;
   flex-wrap: wrap;
@@ -25,4 +30,81 @@ p {
   margin: 0 auto;
   font-size: 1.2em;
   color: #412c0e;
+}
+.formularioContainer {
+  background-color: burlywood;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  margin: 20px auto;
+}
+.formularioContainer .title {
+  color: #412c0e;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.formularioContainer label {
+  display: block;
+  margin-bottom: 5px;
+  color: #412c0e;
+}
+.formularioContainer input {
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+.formularioContainer button {
+  padding: 10px;
+  width: 40%;
+  background-color: #412c0e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 30%;
+}
+.listaContatosContainer {
+  background-color: burlywood;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  margin: 20px auto;
+}
+.listaContatosContainer .title {
+  color: #412c0e;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.cardContato {
+  background-color: #fff9f4;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.cardContato p {
+  margin: 5px 0;
+  color: #412c0e;
+}
+.cardContato button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 45%;
+  background-color: #412c0e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 5%;
+}
+.cardContato button:last-child {
+  margin-right: 0;
+  background-color: #a52a2a;
+}
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
