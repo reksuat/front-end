@@ -1,13 +1,21 @@
 import { useState } from "react";
 import ListaProduto from "./componentes/ListaProduto.jsx";
+import Formulario from "./componentes/Formulario.jsx";
+import ListaContatos from "./componentes/ListaContatos.jsx";
+
+import { ContatoProvider } from "./componentes/ContatoContext.jsx";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="title">Cafeteria</h1>
-      <ListaProduto />
-    </div>
+    <ContatoProvider>
+      <div className="App">
+        <h1 className="title">Cafeteria</h1>
+        <ListaProduto />
+        <Formulario />
+        <ListaContatos />
+      </div>
+    </ContatoProvider>
   );
 }
 export default App;
