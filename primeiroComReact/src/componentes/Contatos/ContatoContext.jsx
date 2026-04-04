@@ -2,7 +2,10 @@ import React, { createContext, useState } from "react";
 export const ContatoContext = createContext();
 
 export function ContatoProvider(props) {
-  const [contatos, setContatos] = useState([]);
+  const [contatos, setContatos] = useState(function () {
+    const dadosSalvos = localStorage.getItem("listaContatos");
+    return dadosSalvos ? JSON.parse(dadosSalvos) : [];
+  });
 
   function adicionarContato(nomeUsuario, telefoneUsuario) {
     const novoContato = {
@@ -12,6 +15,7 @@ export function ContatoProvider(props) {
       favorito: false,
     };
     setContatos([...contatos, novoContato]);
+    localStorage.setItem("listaContatos", JSON.stringify(novaLista));
   }
 
   function alterarFavorito(idContato) {
@@ -22,6 +26,7 @@ export function ContatoProvider(props) {
       return contato;
     });
     setContatos(contatosAtualizados);
+    localStorage.setItem("listaContatos", JSON.stringify(novaLista));
   }
 
   function excluirContato(idContato) {
@@ -29,6 +34,7 @@ export function ContatoProvider(props) {
       (contato) => contato.id !== idContato,
     );
     setContatos(contatosAtualizados);
+    localStorage.setItem("listaContatos", JSON.stringify(novaLista));
   }
 
   return (
