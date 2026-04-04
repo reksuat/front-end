@@ -12,6 +12,9 @@ function App() {
       <div className="App">
         <h1 className="title">Cafeteria</h1>
         <ListaProduto />
+
+        <hr style={{ margin: "40px 0" }} />
+
         <Formulario />
         <ListaContatos />
       </div>
